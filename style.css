@@ -1,0 +1,31 @@
+
+* {
+    box-sizing: border-box;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+
+}
+
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(16, 25px [col-start]);
+    border: 2px solid green;
+}
+.grids {
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+}
+
