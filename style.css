@@ -19,13 +19,12 @@ h1{
 .container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(16, 25px [col-start]);
+    grid-template-columns: repeat(16, 40px [col-start]);
     border: 2px solid green;
 }
 .grids {
     border: 1px solid black;
-    width: 25px;
-    height: 25px;
+    height: 40px;
     margin: 0px;
 }
 
