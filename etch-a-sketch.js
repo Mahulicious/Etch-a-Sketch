@@ -30,11 +30,13 @@ promptBox.addEventListener('click', newGrid );
 //Creates new grid of squares depending on users input
 function newGrid () {
 
+  // limit user input to 100 or less.
 let promptbtn = prompt("Please enter numbers of square you want for sketch pad.");
 while(promptbtn > 100 ) {
   alert("Too many squres! Please enter 100 or less squares per side.");
   promptbtn = prompt("Please enter numbers of square you want for sketch pad.");
 }
+
 const size = (100/promptbtn);
 var div = document.querySelector('.container');   
 
@@ -63,6 +65,20 @@ for (i=0; i < draws.length; i++) {
 }
 
 }
+
+//clear the sketch pad
+
+const clear = document.querySelector('.clearBtn');
+clear.addEventListener('click', sketchClear);
+
+function sketchClear() {
+  const grid = document.querySelectorAll('.grids');
+  for (i=0; i < grid.length; i++) {
+  grid[i].style.backgroundColor = "transparent";
+}
+}
+  
+
 
 
 
