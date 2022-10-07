@@ -1,4 +1,12 @@
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 30px;
+}
 * {
     box-sizing: border-box;
 }
@@ -6,30 +14,45 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid orange;
 }
 .btns {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15px;
     border: 2px solid red;
+
+}
+.makeGrid {
+    display: grid;
+    grid-template-columns: repeat(16, 40px );
 
 }
 
 
 .container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(16, 40px [col-start]);
+    height: 640px;
+    width: 640px;
+    margin: auto;
     border: 2px solid green;
 }
 .grids {
+    float: left;
+    box-sizing: border-box;
     border: 1px solid black;
-    height: 40px;
-    margin: 0px;
+    
 }
+
+    
+   
+   
+    
+
 
 .drawing {
     background-color: gray;
 }
+
 
 
