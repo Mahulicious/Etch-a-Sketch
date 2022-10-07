@@ -1,24 +1,26 @@
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    gap: 30px;
+   
 }
 * {
     box-sizing: border-box;
 }
 h1{
     display: flex;
+    font-family: 'Brush Script MT', cursive;
+    font-style: italic;
+    font-size: 50px;
+    color: goldenrod;
     justify-content: center;
     align-items: center;
-    border: 2px solid orange;
+   
 }
 .btns {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 15px;
     border: 2px solid red;
@@ -26,16 +28,19 @@ h1{
 }
 .makeGrid {
     display: grid;
-    grid-template-columns: repeat(16, 40px );
+    grid-template-columns: repeat(16, 35px );
 
 }
 
 
 .container {
-    height: 640px;
-    width: 640px;
+    height: 560px;
+    width: 560px;
+    background-color: white;
+    border: 5px solid black;
     margin: auto;
-    border: 2px solid green;
+    
+    
 }
 .grids {
     float: left;
@@ -44,14 +49,26 @@ h1{
     
 }
 
-    
-   
-   
-    
 
 
 .drawing {
     background-color: gray;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    padding-bottom: 30px;
+    background-color: red;
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
+}
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 
