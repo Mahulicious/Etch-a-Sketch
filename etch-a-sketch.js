@@ -13,7 +13,7 @@ for (let i = 0; i < 256; i++ ) {
 const draws = document.querySelectorAll('.grids');
 for (i=0; i < draws.length; i++) {
     draws[i].addEventListener('mouseenter', function() {
-    this.style.backgroundColor = "gray"
+    this.style.backgroundColor = "black"
 });
 }
 
@@ -60,7 +60,7 @@ var div = document.querySelector('.container');
 const draws = document.querySelectorAll('.grids');
 for (i=0; i < draws.length; i++) {
     draws[i].addEventListener('mouseenter', function() {
-    this.style.backgroundColor = "gray"
+    this.style.backgroundColor = "black"
 });
 }
 
@@ -78,6 +78,43 @@ function sketchClear() {
 }
 }
   
+// Generate random background color
+
+function generateRandomColor() {
+  let x1 = Math.floor(Math.random() * 256);
+  let x2 = Math.floor(Math.random() * 256);
+  let x3 = Math.floor(Math.random() * 256);
+  let generateColor = "rgb(" + x1 + "," + x2 + "," + x3 + ")";
+  return generateColor;
+
+}
+
+
+
+const applyBtns = document.querySelector('#applyBtn');        
+    const radioButtons = document.querySelectorAll('input[name="colors"]');
+       applyBtns.addEventListener("click", () => {
+         let selectedBtn;
+         for (const radioButton of radioButtons) {
+             if (radioButton.checked) {
+                selectedBtn = radioButton.value;
+                 break;
+                }
+            }
+           console.log(selectedBtn);
+    if(selectedBtn = "Rainbow Mode") {
+      const rainbow = document.querySelectorAll('.grids');
+      for (i=0; i < rainbow.length; i++) {
+      rainbow[i].addEventListener('mouseenter', function() {
+        console.log(generateRandomColor());
+      this.style.backgroundColor = generateRandomColor();
+});
+}
+
+           }
+           
+        });
+
 
 
 

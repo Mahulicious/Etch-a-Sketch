@@ -1,8 +1,10 @@
 
 body {
     display: flex;
-    justify-content: center;
+    justify-content:baseline;
     align-items: center;
+    gap: 150px;
+    background-color: lightgreen;
    
 }
 * {
@@ -45,15 +47,12 @@ h1{
 .grids {
     float: left;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid gray;
     
 }
 
 
 
-.drawing {
-    background-color: gray;
-}
 
 .mainContainer {
     display: flex;
@@ -65,10 +64,48 @@ h1{
     height: 800px;
     border: 2px solid black;
 }
-button {
+.promptBtn {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+}
+.clearBtn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.settingContainer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-left: 50px;
+    margin-top: 80px;
+    border: 2px solid black;
+    width: 350px;
+    height: 400px;
+    
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    width: 350px;
+    height: 50px;
+}
+.btnGroup {
+    display: flex;
+    width: 180px;
+    font-size: 20px;
+    flex-wrap: wrap;
+     gap: 30px;
+     margin-left: 30px;
+     border: 2px solid red;
+}
+
+#applyBtn {
+    width: 100px;
+    height: 50px;
 }
 
 
