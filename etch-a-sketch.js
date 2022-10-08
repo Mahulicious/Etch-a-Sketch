@@ -89,7 +89,18 @@ function generateRandomColor() {
 
 }
 
+// Change background color to black by 10% everytime
+function generateBlackColor() {
+  let opa = 0;
+  while(opa != 100) {
+    opa += 10;
+  }
+  return opa;
+}
 
+
+//Selects a radiobutton, returns value of selected button
+//Assigns event listener based on selected value.
 
 const applyBtns = document.querySelector('#applyBtn');        
     const radioButtons = document.querySelectorAll('input[name="colors"]');
@@ -102,16 +113,28 @@ const applyBtns = document.querySelector('#applyBtn');
                 }
             }
            console.log(selectedBtn);
-    if(selectedBtn = "Rainbow Mode") {
+    if(selectedBtn === "Rainbow Mode") {
       const rainbow = document.querySelectorAll('.grids');
       for (i=0; i < rainbow.length; i++) {
       rainbow[i].addEventListener('mouseenter', function() {
-        console.log(generateRandomColor());
       this.style.backgroundColor = generateRandomColor();
 });
 }
+   } else if (selectedBtn === "Standard Mode") {
+    const standard = document.querySelectorAll('.grids');
+      for (i=0; i < standard.length; i++) {
+      standard[i].addEventListener('mouseenter', function() {
+        this.style.backgroundColor = "white";
+        this.style.backgroundColor += 0.1;
+       
+        
+        // Finish this here, and delete getblack() function
+        
+});
+}
+    
 
-           }
+   }
            
         });
 
