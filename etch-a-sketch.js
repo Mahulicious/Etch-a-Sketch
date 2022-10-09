@@ -13,7 +13,7 @@ for (let i = 0; i < 256; i++ ) {
 const draws = document.querySelectorAll('.grids');
 for (i=0; i < draws.length; i++) {
     draws[i].addEventListener('mouseenter', function() {
-    this.style.backgroundColor = "black"
+    this.style.backgroundColor = "gray"
 });
 }
 
@@ -89,13 +89,28 @@ function generateRandomColor() {
 
 }
 
-// Change background color to black by 10% everytime
+// Make grid lighter everytime this function is called
+let x1 = 255;
+let x2 = 255;
+let x3 = 255;
+function generateDarktoLight() {
+ 
+   x1 = x1 - ((x1/100) * 10);
+   x2 = x2 - (x2/100 * 10);
+   x3 = x3 - (x3/100 * 10);
+  
+  let generateBlackColor = "rgb(" + x1 + "," + x2 + "," + x3 + ")";
+  console.log(generateBlackColor);
+  return generateBlackColor;
+  
+
+}
+// Makes squares black if mouse passes through them 10 times
 function generateBlackColor() {
-  let opa = 0;
-  while(opa != 100) {
-    opa += 10;
-  }
-  return opa;
+  this.style.backgroundColor = "gray";
+  let Opa = +this.style.opacity;
+  if (Opa < 1) Opa += 0.1;
+  this.style.opacity = Opa;
 }
 
 
@@ -112,8 +127,9 @@ const applyBtns = document.querySelector('#applyBtn');
                  break;
                 }
             }
-           console.log(selectedBtn);
+           
     if(selectedBtn === "Rainbow Mode") {
+      sketchClear()
       const rainbow = document.querySelectorAll('.grids');
       for (i=0; i < rainbow.length; i++) {
       rainbow[i].addEventListener('mouseenter', function() {
@@ -121,25 +137,27 @@ const applyBtns = document.querySelector('#applyBtn');
 });
 }
    } else if (selectedBtn === "Standard Mode") {
+    sketchClear();
     const standard = document.querySelectorAll('.grids');
       for (i=0; i < standard.length; i++) {
-      standard[i].addEventListener('mouseenter', function() {
-        this.style.backgroundColor = "white";
-        this.style.backgroundColor += 0.1;
+      standard[i].addEventListener('mouseenter', generateBlackColor);
+        
+        
+          
+        
        
         
-        // Finish this here, and delete getblack() function
         
-});
-}
+        
+
     
 
    }
-           
-        });
+ 
 
 
 
 
 
-
+  }
+})
